@@ -42,7 +42,7 @@ var counter=setInterval(timer, 1000);
         var score = 0;
         var missed = 0;  
 
-        // Need to figure out better way to write this if time, maybe a loop
+        // Need to figure out a better way to write this if time
         var answer1 = $('input[name=q1]:checked').val(); 
         var answer2 = $('input[name=q2]:checked').val(); 
         var answer3 = $('input[name=q3]:checked').val(); 
