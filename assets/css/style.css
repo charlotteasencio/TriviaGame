@@ -7,12 +7,6 @@ body{
     background-repeat: no-repeat;
 }
 
-img{
-    margin-left: 20px;
-    margin-bottom: 20px;
-    margin-top: 10px;
-}
-
 @font-face {
     font-family: newFont;
     src: url("../YanoneKaffeesatz-Light.otf");
@@ -142,4 +136,10 @@ label{
     font-size: 24px;
     margin-top: 10px;
     font-family: 'EB Garamond', serif;
+}
+
+img{
+    margin-left: 130px;
+    margin-bottom: 20px;
+    margin-top: 10px;
 }
