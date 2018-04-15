@@ -102,9 +102,6 @@ form{
     text-align: center;
 }
 
-#score{
-}
-
 #missed{
     margin-top: 15px;
 }
@@ -119,18 +116,3 @@ label{
     font-family: 'EB Garamond', serif;
     margin-left: 20px;
 }
-
-img{
-
-}
-
-/*@media only screen and (max-width: 640px) {
-}
-
-@media only screen and (min-width: 641px) and (max-width: 768px) {
-
-  }
-  
-  @media only screen and (min-width: 769px) and (max-width: 980px) {
-  
-  }*/
