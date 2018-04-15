@@ -9,56 +9,63 @@
     <script src="assets/javascript/app.js"></script>
 </head>
 <body>
-<div id="start">
-    <button type="button">Start</button>
+
+<header>
+<h1>How I Met Your Mother Trivia</h1>
+<img src="assets/images/smallyellowumbrella.png">
+</header>
+
+<div id=startDiv>
+<button id="start" type="button">Start</button>
 </div>
 
+<div id="container">
 <div id="timer">Time Remaining: 60 seconds</div>
 
 <div id="questions">
     <div id="question1">
-        <h1>What is the Capital City of Guatemala?</h1>
+        <h2>1) What does Barney have to wear for a year after losing a bet?</h2>
             <form name="question1">
-                <input type="radio" name="q1" value="Quetzaltenango">Quetzaltenango
-                <input type="radio" name="q1" value="Guatemala City">Guatemala City
-                <input type="radio" name="q1" value="Antigua">Antigua
-                <input type="radio" name="q1" value="Villa Nueva">Villa Nueva
+                <input type="radio" name="q1" value="Elephant Shirt">Elephant Shirt<br>
+                <input type="radio" name="q1" value="Flamingo Socks">Flamingo Socks<br>
+                <input type="radio" name="q1" value="Ducky Tie">Ducky Tie<br>
+                <input type="radio" name="q1" value="Butterfly Necklace">Butterfly Necklace<br>
             </form>
         </div>
     <div id="question2">
-        <h1>What day do Guatemalans celebrate their independence from Spain?</h1>
+        <h2>2) What is Ted's doppleganger's profession?</h2>
             <form>
-                <input type="radio" name="q2" value="September 15th">September 15th
-                <input type="radio" name="q2" value="October 22nd">October 22nd
-                <input type="radio" name="q2" value="May 5th">May 5th
-                <input type="radio" name="q2" value="April 23rd">April 23rd
+                <input type="radio" name="q2" value="Chef">Chef<br>
+                <input type="radio" name="q2" value="Doctor">Doctor<br>
+                <input type="radio" name="q2" value="Baseball Player">Baseball Player<br>
+                <input type="radio" name="q2" value="Wrestler">Wrestler<br>
             </form>
     </div>
     <div id="question3">
-        <h1>What are the two main colors on the Guatemalan flag?</h1>
+        <h2>3) Which of the following is not a game created by Lily's dad?</h2>
             <form>
-                <input type="radio" name="q3" value="Green and Gold">Green and Gold
-                <input type="radio" name="q3" value="Red and Yellow">Red and Yellow
-                <input type="radio" name="q3" value="Blue and White">Blue and White
-                <input type="radio" name="q3" value="Red and White">Red and White
+                <input type="radio" name="q3" value="Landmine Lunge">Landmine Lunge<br>
+                <input type="radio" name="q3" value="Road Kill Rage">Road Kill Rage<br>
+                <input type="radio" name="q3" value="Dog Fight Promoter">Dog Fight Promoter<br>
+                <input type="radio" name="q3" value="Tijuana Slumlord">Tijuana Slumlord<br>
         </form>
     </div>
     <div id="question4">
-         <h1>What type of animal is Guatemala's currency, the quetzal, named after?</h1>
+         <h2>4) Who was Lily's high school boyfriend?</h2>
             <form>
-                <input type="radio" name="q4" value="Bird">Bird
-                <input type="radio" name="q4" value="Monkey">Monkey
-                <input type="radio" name="q4" value="Fish">Fish
-                <input type="radio" name="q4" value="Lizard">Lizard
+                <input type="radio" name="q4" value="Scooter">Scooter<br>
+                <input type="radio" name="q4" value="Billy">Billy<br>
+                <input type="radio" name="q4" value="Fred">Fred<br>
+                <input type="radio" name="q4" value="Jack">Jack<br>
         </form>
     </div>
     <div id="question5">
-        <h1>Which of the following movies contains scenes that were filmed in Guatemala</h1>
+        <h2>5) What is the name of Ted and Barney's dream bar?</h2>
             <form>
-                <input type="radio" name="q5" value="The Hobbit">The Hobbit
-                <input type="radio" name="q5" value="Star Wars: Episode IV">Star Wars: Episode IV
-                <input type="radio" name="q5" value="The Hunger Games">The Hunger Games
-                <input type="radio" name="q5" value="Pirates of the Caribbean: The Curse of the Black Pear">Pirates of the Caribbean: The Curse of the Black Pearl
+                <input type="radio" name="q5" value="Clue">Clue<br>
+                <input type="radio" name="q5" value="Puzzles">Puzzles<br>
+                <input type="radio" name="q5" value="Legends">Legends<br>
+                <input type="radio" name="q5" value="The Blue French Horn">The Blue French Horn<br>
             </form>
     </div>
 </div>
@@ -66,10 +73,12 @@
 <div id="submitButtonDiv">
 <button id="submitbutton">Submit Quiz</button>
 </div>
-
+</div>
 
 <div id="results">
     <div id="score"></div>
+    <div id="missed"></div>
+    <div id="scoreMessage"></div>
 </div>
 </body>
 </html>

@@ -10,8 +10,6 @@ $(document).ready(function () {
         $("#timer").hide();
     });
 
-   
-    
     //start game
     $("#start").click(function() {
       $(this).hide();
@@ -39,40 +37,58 @@ var counter=setInterval(timer, 1000);
         results();
     });
     
-    //timer runs out or submit button clicked - results screen is shown **why are results not showing?**
+    //timer runs out or submit button clicked - results screen is shown 
     function results(){
         var score = 0;
-          
+        var missed = 0;  
 
-        //figure out better way to write this if time
+        // Need to figure out better way to write this if time, maybe a loop
         var answer1 = $('input[name=q1]:checked').val(); 
-        $("#results").append("<div> Your response: " + answer1 + " " + "Correct Response: Guatemala City </div>");
         var answer2 = $('input[name=q2]:checked').val(); 
-        $("#results").append("<div> Your response: " + answer2 + " " + "Correct Response: September 15th </div>");
         var answer3 = $('input[name=q3]:checked').val(); 
-        $("#results").append("<div> Your response: " + answer3 + " " + "Correct Response: Blue and White</div>");
         var answer4 = $('input[name=q4]:checked').val(); 
-        $("#results").append("<div> Your response: " + answer4 + " " + "Correct Response: Bird</div>");
         var answer5 = $('input[name=q5]:checked').val(); 
-        $("#results").append("<div> Your response: " + answer5 + " " + "Correct Response: Star Wars: Episode IV </div>");
+    
 
-        if (answer1 === "Guatemala City") {
+        if (answer1 === "Ducky Tie") {
             score++;
+        } else {
+            missed++;
         }
-        if (answer2 === "September 15th"){
+        if (answer2 === "Wrestler"){
             score++;
-        } 
-        if (answer3 === "Blue and White"){
+        } else {
+            missed++;
+        }
+        if (answer3 === "Road Kill Rage"){
             score++;
-        } 
-        if (answer4 === "Bird"){
+        } else {
+            missed++;
+        }
+        if (answer4 === "Scooter"){
             score++;
-        } 
-        if (answer5 === "Star Wars: Episode IV"){
+        } else {
+            missed++;
+        }
+        if (answer5 === "Puzzles"){
             score++;
+        } else {
+            missed++;
         }
         
-        $("#score").html("Your score: " + score + " " + "of 5");  
+        if (score >= 4){
+        $("#score").html("Correct: " + score); 
+        $("#scoreMessage").html("Legen-wait for it..DARY! Legendary.");
+        $("#missed").html("Incorrect: " + missed);
+    } else if (score === 3) {
+        $("#score").html("Correct: " + score);
+        $("#scoreMessage").html("Not bad.");
+        $("#missed").html("Incorrect: " + missed);
+    } else {
+        $("#score").html("Correct: " + score);
+        $("#scoreMessage").html("You just got slapped.");
+        $("#missed").html("Incorrect: " + missed);
+    }
         $("#results").show();
         $("#questions").hide();
         $("#submitButtonDiv").hide();
