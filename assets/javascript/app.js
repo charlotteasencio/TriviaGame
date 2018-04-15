@@ -78,7 +78,7 @@ var counter=setInterval(timer, 1000);
         
         if (score >= 4){
         $("#score").html("Correct: " + score); 
-        $("#scoreMessage").html("Legen-wait for it..DARY! Legendary.");
+        $("#scoreMessage").html("Legen-wait for it..DARY!");
         $("#missed").html("Incorrect: " + missed);
     } else if (score === 3) {
         $("#score").html("Correct: " + score);
