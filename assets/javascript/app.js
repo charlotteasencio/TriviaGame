@@ -43,11 +43,14 @@ var counter=setInterval(timer, 1000);
         var missed = 0;  
 
         // Need to figure out a better way to write this if time
-        var answer1 = $('input[name=q1]:checked').val(); 
-        var answer2 = $('input[name=q2]:checked').val(); 
-        var answer3 = $('input[name=q3]:checked').val(); 
-        var answer4 = $('input[name=q4]:checked').val(); 
-        var answer5 = $('input[name=q5]:checked').val(); 
+        var answer1 = $("input[name=q1]:checked").val(); 
+        var answer2 = $("input[name=q2]:checked").val(); 
+        var answer3 = $("input[name=q3]:checked").val(); 
+        var answer4 = $("input[name=q4]:checked").val(); 
+        var answer5 = $("input[name=q5]:checked").val(); 
+        var answer6 = $("input[name=q6]:checked").val();
+        var answer7 = $("input[name=q7]:checked").val();
+        var answer8 = $("input[name=q8]:checked").val();
     
 
         if (answer1 === "Ducky Tie") {
@@ -75,12 +78,27 @@ var counter=setInterval(timer, 1000);
         } else {
             missed++;
         }
+        if (answer6 === "Butterfly"){
+            score++;
+        } else {
+            missed++;
+        }
+        if (answer7 === "Regis Philbin"){
+            score++;
+        } else {
+            missed++;
+        }
+        if (answer8 === "Moby"){
+            score++;
+        } else {
+            missed++;
+        }
         
-        if (score >= 4){
+        if (score >= 6){
         $("#score").html("Correct: " + score); 
         $("#scoreMessage").html("Legen-wait for it..DARY!");
         $("#missed").html("Incorrect: " + missed);
-    } else if (score === 3) {
+    } else if (score < 6 && score >= 3) {
         $("#score").html("Correct: " + score);
         $("#scoreMessage").html("Not bad.");
         $("#missed").html("Incorrect: " + missed);
